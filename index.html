@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Desarrollo Web</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado" id="inicio">
+        <h1>Aprendiendo Desarrollo Web</h1>
+        <p>HTML, CSS y JavaScript trabajando juntos</p>
+    </header>
+
+    <nav class="menu">
+        <a href="#conceptos">Inicio</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#tabla">Tabla</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#calificaciones">Calificaciones</a>
+        <a href="#dom">Manipulación DOM</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main class="contenedor-grid">
+
+        <section class="seccion presentacion" id="conceptos">
+            <h2>¿Qué es el desarrollo web?</h2>
+
+            <p>
+                El desarrollo web es el proceso de crear páginas y
+                aplicaciones que funcionan a través de Internet.
+            </p>
+
+            <p>
+                HTML organiza el contenido, CSS controla su apariencia
+                y JavaScript agrega lógica e interactividad.
+            </p>
+
+            <img
+                class="imagen-principal"
+                src="https://placehold.co/800x350/123456/FFFFFF?text=Desarrollo+Web"
+                alt="Ilustración sobre el desarrollo web"
+            >
+
+            <p>
+                Consulta más información en
+                <a href="https://developer.mozilla.org/es/docs/Learn_web_development"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    MDN Web Docs
+                </a>.
+            </p>
+
+            <p id="mensajeBienvenida" class="mensaje">
+                Bienvenido al proyecto de desarrollo web.
+            </p>
+        </section>
+
+        <aside class="seccion lateral">
+            <h2>Objetivos de aprendizaje</h2>
+
+            <ul>
+                <li>Aprender HTML.</li>
+                <li>Aplicar estilos con CSS.</li>
+                <li>Utilizar Flexbox y Grid.</li>
+                <li>Crear páginas responsive.</li>
+                <li>Programar con JavaScript.</li>
+            </ul>
+
+            <h3>Pasos de desarrollo</h3>
+
+            <ol>
+                <li>Crear la estructura.</li>
+                <li>Diseñar la interfaz.</li>
+                <li>Agregar interactividad.</li>
+                <li>Probar la página.</li>
+            </ol>
+        </aside>
+
+        <section class="seccion tecnologias" id="tecnologias">
+            <h2>Tecnologías principales</h2>
+
+            <div class="tarjetas-flex">
+                <article class="tarjeta">
+                    <h3>HTML</h3>
+                    <img
+                        src="https://placehold.co/300x150/E34F26/FFFFFF?text=HTML"
+                        alt="Ilustración de HTML"
+                    >
+                    <p>Define la estructura y el contenido de la página.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>CSS</h3>
+                    <img
+                        src="https://placehold.co/300x150/264DE4/FFFFFF?text=CSS"
+                        alt="Ilustración de CSS"
+                    >
+                    <p>Controla los colores, tamaños, márgenes y diseño.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>JavaScript</h3>
+                    <img
+                        src="https://placehold.co/300x150/F0DB4F/222222?text=JavaScript"
+                        alt="Ilustración de JavaScript"
+                    >
+                    <p>Agrega lógica, eventos e interactividad.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion grid-ejemplo">
+            <h2>Ejemplo de CSS Grid</h2>
+
+            <p>
+                Grid organiza elementos en filas y columnas.
+                Las siguientes celdas muestran una cuadrícula.
+            </p>
+
+            <div class="rejilla-demo">
+                <div class="celda celda-uno">Fila 1 - Columna 1</div>
+                <div class="celda celda-dos">Fila 1 - Columna 2</div>
+                <div class="celda celda-tres">Fila 2 - Columna 1</div>
+                <div class="celda celda-cuatro">Fila 2 - Columna 2</div>
+            </div>
+        </section>
+
+        <section class="seccion tabla-seccion" id="tabla">
+            <h2>Comparación de tecnologías</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tecnología</th>
+                            <th>Función</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Estructurar contenido</td>
+                            <td>Títulos y párrafos</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Diseñar la página</td>
+                            <td>Colores y bordes</td>
+                        </tr>
+                        <tr>
+                            <td>Flexbox</td>
+                            <td>Alinear elementos</td>
+                            <td>Menús y tarjetas</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Grid</td>
+                            <td>Organizar filas y columnas</td>
+                            <td>Distribución de secciones</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Agregar interactividad</td>
+                            <td>Calculadoras y eventos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion calculadora" id="calculadora">
+            <h2>Ejercicio 1: Calculadora</h2>
+            <p>Ingresa dos números y selecciona una operación.</p>
+
+            <form id="formCalculadora">
+                <label for="numero1">Primer número:</label>
+                <input type="number" id="numero1" step="any" required>
+
+                <label for="numero2">Segundo número:</label>
+                <input type="number" id="numero2" step="any" required>
+
+                <label for="operacion">Operación:</label>
+                <select id="operacion">
+                    <option value="sumar">Suma (+)</option>
+                    <option value="restar">Resta (-)</option>
+                    <option value="multiplicar">Multiplicación (×)</option>
+                    <option value="dividir">División (÷)</option>
+                </select>
+
+                <button type="submit">Calcular</button>
+            </form>
+
+            <p id="resultadoCalculadora" class="resultado" aria-live="polite">
+                El resultado aparecerá aquí.
+            </p>
+        </section>
+
+        <section class="seccion calificaciones" id="calificaciones">
+            <h2>Ejercicio 2: Calificación</h2>
+            <p>Ingresa una nota entre 0 y 100. Se aprueba con 60 o más.</p>
+
+            <form id="formCalificacion">
+                <label for="nota">Calificación:</label>
+                <input
+                    type="number"
+                    id="nota"
+                    min="0"
+                    max="100"
+                    step="any"
+                    required
+                >
+
+                <button type="submit">Evaluar nota</button>
+            </form>
+
+            <p id="resultadoNota" class="resultado" aria-live="polite">
+                Aquí aparecerá la evaluación.
+            </p>
+        </section>
+
+        <section class="seccion dom" id="dom">
+            <h2>Ejercicio 3: Manipulación del DOM</h2>
+
+            <label for="nuevoTexto">Escribe un mensaje:</label>
+            <input
+                type="text"
+                id="nuevoTexto"
+                placeholder="Escribe tu mensaje"
+            >
+
+            <button type="button" id="botonCambiarTexto">
+                Cambiar mensaje
+            </button>
+
+            <p id="textoDinamico" class="texto-dinamico">
+                Este texto se puede modificar con JavaScript.
+            </p>
+
+            <div class="botones-formulario">
+                <button type="button" id="botonCambiarEstilo">
+                    Cambiar estilo
+                </button>
+
+                <button type="button" id="botonAlternar">
+                    Mostrar información
+                </button>
+            </div>
+
+            <div id="informacionExtra" class="informacion-extra" hidden>
+                <h3>¡Contenido dinámico!</h3>
+                <p>
+                    JavaScript puede mostrar y ocultar elementos
+                    HTML sin recargar toda la página.
+                </p>
+            </div>
+        </section>
+
+        <section class="seccion lista-dinamica">
+            <h2>Ejercicio 4: Lista dinámica</h2>
+            <p>Escribe una tecnología para agregarla a la lista.</p>
+
+            <form id="formTecnologia">
+                <label for="nombreTecnologia">Tecnología:</label>
+                <input
+                    type="text"
+                    id="nombreTecnologia"
+                    placeholder="Ejemplo: JavaScript"
+                    required
+                >
+
+                <button type="submit">Agregar tecnología</button>
+            </form>
+
+            <ul id="listaTecnologias">
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+
+        <section class="seccion contacto" id="contacto">
+            <h2>Formulario de contacto</h2>
+            <p>Completa los campos del siguiente formulario.</p>
+
+            <form id="formContacto">
+                <label for="nombreContacto">Nombre completo:</label>
+                <input
+                    type="text"
+                    id="nombreContacto"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="correoContacto">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correoContacto"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="temaContacto">Tema de interés:</label>
+                <select id="temaContacto" name="tema" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+
+                <label for="mensajeContacto">Mensaje:</label>
+                <textarea
+                    id="mensajeContacto"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Escribe tu mensaje"
+                    required
+                ></textarea>
+
+                <button type="submit">Enviar formulario</button>
+                <button type="reset" class="boton-secundario">Limpiar</button>
+            </form>
+
+            <p id="resultadoContacto" class="resultado" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
